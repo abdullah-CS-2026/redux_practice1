@@ -1,5 +1,5 @@
 import React from "react";
-import { addItem } from "./redux/slice";
+import { addItem, clearCart, removeItem } from "./redux/slice";
 import {useDispatch} from 'react-redux';
 const Products = () => {
 
@@ -36,6 +36,19 @@ const Products = () => {
           >
             Add To Cart
           </button>
+          <button
+            className="btn btn-warning mt-3 w-100"
+            onClick={() => dispatch(removeItem())}
+          >
+            Remove from Cart
+          </button>
+           <button
+            className="btn btn-warning mt-3 w-100"
+            onClick={() => dispatch(clearCart())}
+          >
+            Clear Cart
+          </button>
+
         </div>
       </div>
     </div>

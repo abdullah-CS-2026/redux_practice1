@@ -1,5 +1,4 @@
 import {createSlice} from "@reduxjs/toolkit";
-
 const initialState={
     cartCount:0
 }
@@ -9,9 +8,16 @@ const addToCart = createSlice({
     reducers:{ 
         addItem:(state)=>{
         state.cartCount+=1;
+    },
+    removeItem: (state)=>{
+        if(state.cartCount>0){
+            state.cartCount-=1;
+        }
+    },
+    clearCart:(state)=>{
+        state.cartCount=0;
     }
  }
 });
-
-export const {addItem} = addToCart.actions;
+export const {addItem, removeItem, clearCart} = addToCart.actions;
 export const cartReducer = addToCart.reducer;

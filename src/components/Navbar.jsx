@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  const cartCount = 0;
+  
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
