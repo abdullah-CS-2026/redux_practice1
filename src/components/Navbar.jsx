@@ -11,6 +11,8 @@ const Navbar = () => {
     { name: "Categories", path: "/categories" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
+    {name:"Product List", path:"/productlist"},
+    {name:"Cart", path: "/cart"},
   ];
 
   
@@ -22,6 +24,8 @@ const Navbar = () => {
         <Link className="navbar-brand fw-bold fs-3" to="/">
           ElectroMart
         </Link>
+
+       
 
         {/* Mobile Toggle */}
         <button
@@ -49,6 +53,7 @@ const Navbar = () => {
                 >
                   {link.name}
                 </Link>
+                
               </li>
             ))}
           </ul>
